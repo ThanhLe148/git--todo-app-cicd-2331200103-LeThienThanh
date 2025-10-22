@@ -7,6 +7,9 @@ test('End-to-end user workflow', async () => {
 
     const taskText = 'My new E2E test task';
 
+    const inputField = window.locator("#todo-input");
+    await inputField.fill("Hello");
+    expect(inputField).toHaveValue("Hello");
     // --- TODO: Task 1: Add a new todo item ---
     // 1. Find the input field (use a locator like window.locator('#todo-input')).
     // 2. Type the `taskText` into it.
@@ -16,7 +19,7 @@ test('End-to-end user workflow', async () => {
     // --- TODO: Task 2: Verify the todo item was added ---
     // 1. Locate the new todo item in the list. A good locator might be `window.locator('.todo-item')`.
     // 2. Assert that its text content contains the `taskText`.
-    
+
 
     // --- TODO: Task 3: Mark the todo item as complete ---
     // 1. Find the checkbox within the new todo item.
